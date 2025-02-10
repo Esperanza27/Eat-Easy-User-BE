@@ -1,0 +1,6 @@
+@eat_easy_user_BE_HostAddress = http://localhost:5238
+
+GET {{eat_easy_user_BE_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
