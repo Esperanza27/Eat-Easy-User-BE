@@ -3,7 +3,6 @@ using eat_easy_user_BE.Src.DTOS;
 using eat_easy_user_BE.Src.Models;
 using eat_easy_user_BE.Src.Repositories.Interfaces;
 using eat_easy_user_BE.Src.Services.Interfaces;
-using Microsoft.AspNetCore.Identity;
 
 namespace eat_easy_user_BE.Src.Services.Implementations
 {
@@ -13,7 +12,7 @@ namespace eat_easy_user_BE.Src.Services.Implementations
         private readonly IMapper _mapper;
         private readonly IPasswordHasher _passwordHasher;
 
-        public  UserService(IUserRepository userRepository, IMapper mapper, IPasswordHasher passwordHasher)
+        public UserService(IUserRepository userRepository, IMapper mapper, IPasswordHasher passwordHasher)
         {
             _userRepository = userRepository;
             _mapper = mapper;
@@ -73,8 +72,5 @@ namespace eat_easy_user_BE.Src.Services.Implementations
             return true;
         }
 
-
-
-       
     }
 }

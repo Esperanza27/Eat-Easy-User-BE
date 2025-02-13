@@ -13,6 +13,12 @@ namespace eat_easy_user_BE.Src.Configuration
             // Mappa UserCreateDTO a UserModel (per la creazione di un nuovo utente)
             CreateMap<UserCreateDTO, UserModel>()
             .ForMember(dest => dest.PasswordHash, opt => opt.Ignore()); // La password sarà hashata prima di essere salvata
+            //Mappa UserProfileModel a UserProfileDTO  e viceversa
+            CreateMap<UserProfileModel, UserProfileDTO>().ReverseMap();
+            //Mappa ActivityLogModel a ActivityLogDTO 
+            CreateMap<ActivityLogModel, ActivityLogDTO>();
+            // Mappa ActivityLogCreateDTO a ActivityLogModel 
+            CreateMap<ActivityLogCreateDTO, ActivityLogModel>();
 
             // Mappa UserUpdateDTO  a UserModel
             //CreateMap<UserUpdateDTO, UserModel>()

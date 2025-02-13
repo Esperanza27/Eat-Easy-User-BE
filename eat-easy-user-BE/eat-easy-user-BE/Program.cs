@@ -28,6 +28,10 @@ namespace eat_easy_user_BE
             builder.Services.AddScoped<IUserRepository, UserRepository>();
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
+            builder.Services.AddScoped<IUserProfileRepository, UserProfileRepository>();
+            builder.Services.AddScoped<IActivityLogRepository, ActivityLogRepository>();
+            builder.Services.AddScoped<IUserProfileService, UserProfileService>();
+            builder.Services.AddScoped<IActivityLogService, ActivityLogService>();
 
             // Abilitazione CORS
             builder.Services.AddCors(options =>

@@ -27,5 +27,8 @@ namespace eat_easy_user_BE.Src.Models
 
         [Column("updated_at")]
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+
+        public virtual UserProfileModel UserProfile { get; set; }
+
     }
 }
